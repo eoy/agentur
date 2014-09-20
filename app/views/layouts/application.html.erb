@@ -4,19 +4,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= content_for?(:title) ? yield(:title) : "Agentur" %></title>
     <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Agentur" %>">
+    <script type="text/javascript" src="//use.typekit.net/azl1otu.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
-    <%# Modernizr is required for Zurb Foundation %>
-    <%= javascript_include_tag 'vendor/modernizr' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
   </head>
   <body>
     <header>
-      <%= render 'layouts/navigation' %>
+      <div class="row">
+        <div class="medium-12 columns text-center">
+          <h1 class="logo">Agentur</h1>
+        </div>
+      </div>
     </header>
-    <main role="main">
-       <%= render 'layouts/messages' %>
-       <%= yield %>
-    </main>
+    <div id="main-nav" class="columns">
+      <nav role="navigation">
+        <ul class="side-nav">
+          <!-- <h5>Actions</h5> -->
+          <li>
+            <a href="#" class="active">
+                <i class="fa fa-fixed fa-group"></i>
+              </span>
+              &nbsp;Models
+            </a>
+          </li>
+          <li>
+            <a href="#">
+                <i class="fa fa-fixed fa-bookmark"></i>
+              </span>
+              &nbsp;Short list
+            </a>
+          </li>
+          <li class="divider"></li>
+          <h5>Model?</h5>
+          <li>
+            <a href="#">
+                <i class="fa fa-fixed fa-plus"></i>
+              </span>
+              &nbsp;Apply to Agentur
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div id="main-content">
+      <main role="main">
+         <%= render 'layouts/messages' %>
+         <%= yield %>
+      </main>
+    </div>
+    <%# Foundation 5 won't work when application.js is included in HEAD %>
+    <%= javascript_include_tag 'vendor/modernizr' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   </body>
 </html>
