@@ -19,6 +19,7 @@ gem 'bourbon'
 gem 'sendgrid'
 gem 'simple_form'
 gem 'ransack', github: 'activerecord-hackery/ransack', branch: 'rails-4.1'
+gem 'inherited_resources'
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_21]
