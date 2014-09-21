@@ -1,0 +1,40 @@
+<div class="full-width-row">
+  <div class="medium-12 columns filters">
+    <%= search_form_for @q do |f| %>
+      <ul class="inline-list left">
+        <li><a href="#" style="color: #fff">Female</a></li>
+        <li><a href="#">Male</a></li>
+        <li><a href="#">Other</a></li>
+      </ul>
+      <div class="right">
+        <div class="row collapse prefix-radius">
+          <div class="small-3 columns">
+            <span class="prefix"><i class="fa fa-search"></i></span>
+          </div>
+          <div class="small-9 columns">
+            <%= f.search_field :name_cont %>
+          </div>
+        </div>
+      </div>
+      <div class="right">
+        <ul class="inline-list display-type">
+          <li><a href="#"><i class="fa fa-fixed fa-th" style="color: #fff"></i></a></li>
+          <li><a href="#"><i class="fa fa-fixed fa-bars"></i></a></li>
+        </ul>
+      </div>
+    <% end %>
+  </div>
+</div>
+<div class="full-width-row">
+  <div class="medium-8 columns">
+    <%= image_tag "malli_1.jpeg" %>
+  </div>
+  <div class="medium-4 columns">
+    <h2>Aliana Aluera</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur expedita assumenda in sed sequi dolore excepturi nihil dolorum nesciunt ut incidunt sint modi provident eligendi inventore possimus voluptate ratione illo.</p>
+    <p class="actions">
+      <span class="fa fa-heart"></span>&nbsp;
+      <span class="fa fa-bookmark"></span>
+    </p>
+  </div>
+</div>

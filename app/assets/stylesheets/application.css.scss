@@ -122,7 +122,7 @@ ul.nostyle {
   height: 100%;
   position: absolute;
   overflow-y: visible;
-  margin-top: 197px;
+  margin-top: 198px;
   main {
     // padding: rem-calc(40);
     padding: 0;
@@ -148,7 +148,7 @@ ul.nostyle {
     height: 407px;
     img {
       // margin-bottom: rem-calc(16);
-      max-height: 420px;
+      height: 407px;
     }
     h4, h5 {
       font-size: rem-calc(14);
@@ -199,7 +199,7 @@ ul.nostyle {
   }
   padding: 0;
   .left {
-    padding: 20px 20px;
+    padding: 21px 20px;
     border-right: 1px solid #202020;
   }
   .right {
@@ -215,3 +215,19 @@ ul.nostyle {
 }
 
 @import 'hovers';
+img.toAnimate {
+  position: absolute;
+  z-index: 5;
+  overflow: visible;
+  display: inline-block;
+  padding: 5px;
+  @include transition(all, 0.5s);
+}
+img.animating {
+  bottom: 100px;
+  left: -500px;
+  width: 50px;
+  height: auto !important;
+}
+
+@import 'people';

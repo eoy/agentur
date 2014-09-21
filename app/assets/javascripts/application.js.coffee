@@ -17,3 +17,23 @@
 #= require_tree .
 $ ->
   $(document).foundation();
+
+  $('span.fa-heart').click (e) ->
+    e.preventDefault()
+    $(@).toggleClass "active"
+
+  $('span.fa-bookmark').click (e) ->
+    e.preventDefault()
+    src = $(@).parents('figure').data('image')
+    $img = new Image()
+    $img.src = src
+    $(@).parents('li').prepend $img
+    $($img).addClass 'toAnimate'
+
+    $($img).animate({
+      'bottom': '100px';
+      'left': '-500px';
+      'width': '50px';
+      'height': 'auto !important';
+    }).addClass 'animating'
+    console.log $img
