@@ -27,11 +27,11 @@
 </div>
 <div class="full-width-row">
   <div class="medium-8 columns">
-    <%= image_tag "malli_1.jpeg" %>
+    <%= image_tag "malli_#{rand(9) + 1}.jpeg" %>
   </div>
   <div class="medium-4 columns">
-    <h2>Aliana Aluera</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur expedita assumenda in sed sequi dolore excepturi nihil dolorum nesciunt ut incidunt sint modi provident eligendi inventore possimus voluptate ratione illo.</p>
+    <h2><%= @person.name %></h2>
+    <p><%= @person.description %></p>
     <p class="actions">
       <span class="fa fa-heart"></span>&nbsp;
       <span class="fa fa-bookmark"></span>

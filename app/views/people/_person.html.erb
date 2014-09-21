@@ -1,6 +1,6 @@
 
 <li class="large-3 medium-4 small-12 text-center grid-model">
-  <figure class="effect-zoe" data-image="<%= asset_path "malli_1.jpeg" %>" style="background-image: url('<%= asset_path "malli_1.jpeg" %>'); background-size: cover; background-position: 0 0">
+  <figure class="effect-zoe" data-image="<%= asset_path "malli_#{person_counter + 1}.jpeg" %>" style="background-image: url('<%= asset_path "malli_#{person_counter + 1}.jpeg" %>'); background-size: cover; background-position: 0 0">
     <figcaption>
       <h2><%= person.age %>v, <%= person.weight.to_i %>kg</h2>
       <span class="fa fa-heart"></span>

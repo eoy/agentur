@@ -5,5 +5,16 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-user = CreateAdminService.new.call
-puts 'CREATED ADMIN USER: ' << user.email
+
+if User.count == 0
+  user = CreateAdminService.new.call
+  puts 'CREATED ADMIN USER: ' << user.email
+end
+
+require 'faker'
+
+10.times do |i|
+  a = Person.new(name: Faker::Name.name, weight: (50 + rand(20)), description: Faker::Lorem.paragraph, age: 17 + rand(10), phone: Faker::PhoneNumber.phone_number, email: Faker::Internet.email)
+  a.save
+  puts "Created model: #{a.name}"
+end
